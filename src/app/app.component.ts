@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-// import { HomeComponent } from './home/home.component'; //this comes from the export from the home.component.ts file.
 import { HomeComponent } from './home/index'; //optional way
-import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { LoggingService } from '../logging.service';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  directives: [HomeComponent, Router ]
+  directives: [HomeComponent]
 })
 
 export class AppComponent {

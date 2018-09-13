@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { DirectoryComponent } from './directory/directory.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FilterPipe } from './filter.pipe';
+import { HttpModule } from '@angular/http'; //HTTP_PROVIDERS is deprecated
+
 
 
 @NgModule({
@@ -14,11 +16,12 @@ import { FilterPipe } from './filter.pipe';
     AppComponent,
     HomeComponent,
     DirectoryComponent,
-    FilterPipe
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'directory', component: DirectoryComponent }
