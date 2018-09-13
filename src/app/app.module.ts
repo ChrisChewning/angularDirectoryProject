@@ -19,7 +19,7 @@ import { RouterModule, Routes } from '@angular/router';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'directory/:person', component: DirectoryComponent }
+      { path: 'directory', component: DirectoryComponent }
 ])
   ],
   providers: [],

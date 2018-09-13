@@ -1,7 +1,21 @@
-<p>
+<!-- <p [ngClass]="{'blue': true, 'red': false, 'underline': true}"> -->
+
+<!-- attribute directive -->
+  <p [ngClass]="classes">
   directory works!
 </p>
+
+
+<!-- structural directive -->
+<p *ngIf="test">Only show if true</p>
 
 <!-- <p>
 {{person}}
 </p> -->
+
+
+<style>
+  .blue{color: blue;}
+  .red{color: red;}
+  .underline{text-decoration: underline;}
+</style>

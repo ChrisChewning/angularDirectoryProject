@@ -9,11 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class DirectoryComponent implements OnInit {
+  classes = {'blue': true, 'red': false, 'underline': true};
+  test = false;
   // person: string; //declared
   //
   // constructor(private route: ActivatedRoute) { //injects the private route: ActivatedRoute into the constructor function. private route
   // this.person = route.snapshot.params['person'];
-constructor() {}
+constructor() { }
   //1. save the person property as this.person. this.person points to person: string. defined the type in OnInIt function.
 
   //2. route.snapshot.params  is saying look at the route in app.routes.ts. (your routes file) take a snapshot of that route. grab the paramters of that route. we want the paramater 'person'
