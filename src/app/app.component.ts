@@ -9,7 +9,19 @@ import { HomeComponent } from './home/index'; //optional way
   styleUrls: ['./app.component.css'],
   directives: [HomeComponent]
 })
+
 export class AppComponent {
   title = 'Chris\'s Directory';
-  name='Chris'
+  name = 'Chris';
+  person = {
+    name: "Chris",
+    company: "none"
+  };
+
+
+//add is the fn name. It is in your root component, which is outputting 
+add(e){
+  alert('clicked');
+}
+
 }

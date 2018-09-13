@@ -8,12 +8,17 @@
   </nav>
 </header>
 
-<section id="main">
-
   <!-- app-home is the home component nested inside the home component. This is why it's app-home. it points to the .html file b.c that is the view file in the component. -->
   <!-- 2. if you put something inside <app-home></app-home> it gets overriden by what is actually inside of app-home (remember: app-home points to the app/home/home.component.html file). HOWEVER, if you put <ng-content></ng-content> it looks for what's in the tags in app-home and outputs it there. -->
 
-  <app-home>hi</app-home>
+<!-- custom property data binding. Whenever you get the app-home tag and you get the home component, bind the data with the custom property chris -->
 
+<section id="main">
+  <app-home [person]='person' (onClick)="add($event)">hi</app-home>
+  <!-- LISTENER:  When home component emits the event it outputs it up the tree to app. This is from the button click in home.component.html.
+  Your <app-home></app-home> is listening for it.
 
+  It fires the add function.
+
+  onClick could be a diff. name.  add is the name that will be pointed to your function in app.component.ts. this could be a diff. name too.-->
 </section>

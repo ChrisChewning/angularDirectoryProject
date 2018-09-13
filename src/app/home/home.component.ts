@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
@@ -10,17 +10,12 @@ import { FormsModule } from '@angular/forms';
 export class HomeComponent implements OnInit {
 
     homeTitle="Welcome to the home page..."; //variable defined on the HomeComponent class.
-    // // homeString= 'Name';
-    // // homeBoolean='true';
-    //
-    // alertMe(val){
-    //   alert(val);
-    // }
+    @Input() person; //you input person from app. root down the tree.
+    @Output() onClick = new EventEmitter(); //output the event click UP the tree to the root. Think: Root is at the top and everything is nested to root downwards.
 
-  person = {
-    name: "Chris",
-    company: "none"
-  };
+    fireAddEvent(e){
+      this.onClick.emit(e); //the fn runs. .onClick emits the event. this points to the @output(). It will emit this onClick event.
+    }
 
 
   constructor() { }
