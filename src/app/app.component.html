@@ -14,7 +14,13 @@
 <!-- custom property data binding. Whenever you get the app-home tag and you get the home component, bind the data with the custom property chris -->
 
 <section id="main">
-  <app-home [person]='person' (onClick)="add($event)">hi</app-home>
+
+<!-- remember these are directives and need to be imported. router-outlet and app-home -->
+
+<!-- this tells angular to load in the route we requested. -->
+  <router-outlet></router-outlet>
+
+  <!-- <app-home [person]='person' (onClick)="add($event)">hi</app-home> -->
   <!-- LISTENER:  When home component emits the event it outputs it up the tree to app. This is from the button click in home.component.html.
   Your <app-home></app-home> is listening for it.
 
