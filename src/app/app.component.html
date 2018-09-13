@@ -2,8 +2,14 @@
   <h1>{{title}}</h1>
   <nav class="nav">
     <ul>
-      <li>Link</li>
-      <li>Link</li>
+
+<!-- routerLink directive with property binding -->
+      <li><a [routerLink]="['/']">Home</a></li>
+      <li><a [routerLink]="['/directory/:person']">Directory</a></li>
+
+      <!-- if you do it this way the page still refreshes -->
+      <!-- <li><a href="/">Home</a></li>
+      <li><a href="/directory">Directory</a></li> -->
     </ul>
   </nav>
 </header>

@@ -1,6 +1,7 @@
 import { DirectoryComponent } from './directory/directory.component';
 import { HomeComponent } from './home/home.component';
 import { provideRoutes } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 const appRoutes = [
