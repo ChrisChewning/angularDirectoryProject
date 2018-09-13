@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component.ts'; //this comes from the export from the home.component.ts file.
+// import { HomeComponent } from './home/home.component'; //this comes from the export from the home.component.ts file.
 import { HomeComponent } from './home/index'; //optional way
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,6 @@ import { HomeComponent } from './home/index'; //optional way
   directives: [HomeComponent]
 })
 export class AppComponent {
-  title = 'angular-directory';
+  title = 'Chris\'s Directory';
+  name='Chris'
 }

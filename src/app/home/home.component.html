@@ -3,3 +3,21 @@
   <!--string interpolation. variable from home.component.ts  -->
 </p>
 <ng-content></ng-content>
+
+<!-- property binding -->
+<!-- <input value='{{homeString}}' />
+<input required='{{homeBoolean}}' />
+<button (click)='alertMe("hi there")'>Click me</button> -->
+
+
+<!-- 2-way data binding -->
+<!-- this info goes to the component. then the component sends it back to the view.  -->
+<label>Name:</label>
+
+<input type='text' [(ngModel)]="person.name" />
+<!-- [] means look up the value from the component instead of treating it as a string or inline value. () -->
+<label>Company:</label>
+<input [(ngModel)]='person.company' />
+
+<p>{{person.name}}</p>
+<p>{{person.company}}</p>
