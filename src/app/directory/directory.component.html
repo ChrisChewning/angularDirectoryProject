@@ -1,14 +1,30 @@
-<h2>People I've Met</h2>
 
+
+<div class='directoryInfo'>
+
+  <div class='peopleMet'>
+  <h2>People I've Met</h2>
 <form id='filter'>
   <label>Search by company name: </label>
   <input text="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}"/>
 </form>
+</div>
 
-<ul id='people-listing'>
+<div class='addPerson'>
+<h2>Add Person</h2>
+<form>
+  <label class='nameLabel'>Name: </label>
+  <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" />
+  <label>Company: </label>
+  <input type="text" [(ngModel)]="company" [ngModelOptions]="{standalone: true}" />
+  <button (click)="fbPostData(name, company)">Click</button>
+</form>
+</div>
+
+<ul class='people-listing'>
   <li *ngFor='let people of peoples | filter:term'>
     <!-- filter:term points at the ngModel -->
-    <div class='single ninja'>
+    <div class='person'>
       <h3>{{people.name | uppercase }}</h3>
       <!-- 1. pipes can be functional too. example:  slice: 1:3 would slice off the 1st position and from the 3rd on.
     2. you can do multiple pipes (chaining) ex: | uppercase | slice: 1:3 -->
@@ -19,7 +35,11 @@
   </li>
 </ul>
 
-<button (click)="logIt()">Log me</button> 
+
+</div>
+
+
+<!-- <button (click)="logIt()">Log me</button> -->
 
 <!-- <p [ngClass]="{'blue': true, 'red': false, 'underline': true}"> -->
 

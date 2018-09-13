@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>AngularDirectory</title>
@@ -7,9 +8,27 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="/src/styles.css" rel="stylesheet" type="text/css"
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <link rel="/src/styles.css" rel="stylesheet" type="text/css" </head>
+
+  <body>
+    <app-root></app-root>
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB9lPI500v4V4vA3St8rXpWnFk3pO7pY4I",
+        authDomain: "angulardirectory.firebaseapp.com",
+        databaseURL: "https://angulardirectory.firebaseio.com",
+        projectId: "angulardirectory",
+        storageBucket: "angulardirectory.appspot.com",
+        messagingSenderId: "311282223635"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
+  </body>
+
 </html>

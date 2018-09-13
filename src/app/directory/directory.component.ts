@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FilterPipe } from '../filter.pipe';
 import { LoggingService } from '../logging.service';
 import { DataService } from '../data.service';
-
+declare var firebase: any;
 
 @Component({
   moduleId: module.id;
@@ -17,7 +17,7 @@ import { DataService } from '../data.service';
 
 export class DirectoryComponent implements OnInit {
   peoples = [];
-  boolean = null;
+  bool = null;
     // {name: 'Louis Salin', company: 'SparkCoginition', color: 'red'},
     // {name: 'Praneeth Mudiganti', company: 'SparkCognition', color: 'red'},
     // {name: 'Monica Singh', company: 'Civitas Learning', color: 'cyan'}
@@ -43,7 +43,24 @@ logIt(){
 
 
   ngOnInit() {
-    this.dataService.fetchData(); //will look into the service and make sure the page is loaded first.
+    // return this.dataService.fetchData().subscribe(
+    //     (data) => this.peoples = data
+    //   ); //will look into the service and make sure the page is loaded first.
+
+    this.fbGetData();
   }
+
+
+fbGetData() {
+  firebase.database().ref('/').on('child_added', (snapshot) => {
+    this.peoples.push(snapshot.val())
+    console.log(snapshot)
+  })
+}
+
+fbPostData(name, company){
+  firebase.database().ref('/').push({name: name, company: company});
+}
+
 
 }

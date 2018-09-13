@@ -1,0 +1,10 @@
+/* .people-listing {
+  /* margin-left: 0; */
+  /* padding: 0; */
+/* }  */
+
+
+.people-listing li {
+  list-style-type: none;
+  margin: 10px 0;
+}
