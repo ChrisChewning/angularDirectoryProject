@@ -9,8 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class DirectoryComponent implements OnInit {
-  classes = {'blue': true, 'red': false, 'underline': true};
-  test = false;
+  peoples = [
+    {name: 'Louis Salin', company: 'SparkCoginition', color: 'red'},
+    {name: 'Praneeth Mudiganti', company: 'SparkCognition', color: 'red'},
+    {name: 'Monica Singh', company: 'Civitas Learning', color: 'cyan'}
+  ];
+
+
+  // classes = {'blue': true, 'red': false, 'underline': true};
+  // test = false;
   // person: string; //declared
   //
   // constructor(private route: ActivatedRoute) { //injects the private route: ActivatedRoute into the constructor function. private route

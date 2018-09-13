@@ -9,6 +9,12 @@ h1,h2,h3{
   margin: 0;
 }
 
+
+.peopleCompany {
+  font-style: italic;
+}
+
+
 .belt{
   padding: 5px 10px;
   border-radius: 10px;
